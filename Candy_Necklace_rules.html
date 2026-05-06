@@ -1,0 +1,445 @@
+<html>
+
+<head>
+
+<title>Candy Necklace</title>
+<meta name=description
+content="Candy Necklace rule sheet">
+<meta name=keywords
+content="game, abstract game, mark steere games">
+
+<style type="text/css" media='screen'>
+
+  body  { font-size:large; 
+          background-image:url('pictures/paper_texture_a.jpg'); 
+          margin:0;
+          padding-top:1em;
+          min-width:800px }
+          
+  a:link {color: blue; text-decoration: underline; }
+  a:active {color: orange; text-decoration: underline; }
+  a:visited {color: purple; text-decoration: underline; }
+  a:hover {color: magenta; text-decoration: none; }
+  
+  p.indent { margin-left:2em;margin-right:2em }
+  
+  h2.section_header { font-size: x-large; }
+  
+      p.blue_bar { height:3px;
+  background-color:blue;
+  margin-top:1em;
+  margin-bottom:1em;
+  margin-left:5%;
+  margin-right:5%;
+  overflow: hidden }
+
+  img { margin-left:4em }
+
+</style>
+
+
+</head>
+
+
+<body style="margin-left:.5em;margin-right:.5em" bgcolor=white lang=EN-US link=blue alink=red vlink=purple>
+
+<h1 style="text-align:center; margin-bottom:0">CANDY NECKLACE</h1>
+
+<h2 style="text-align:center; margin-top:0">by Mark Steere</h2>
+
+<hr size=2 width="80%" align=center>
+
+<h2>PREFACE</h2>
+
+<p class="indent">
+
+Candy Necklace exists to demonstrate some connection game principles.  (And conversely, the principles 
+themselves comprise a game.)  Candy Necklace may not be a game that anyone would ever want to play, although 
+there's nothing stopping you.
+<br><br>
+
+Candy Necklace has a sister game, Naked Diagonal, which also explores properties of connection games.
+<br><br>
+
+<h2>INTRODUCTION</h2>
+
+<p class="indent">
+
+In a typical, square-grid connection game, the north and south edges would be colored red, the 
+east and west edges colored blue.  Red's goal would be to connect the red edges with an orthogonally (horizontally 
+or vertically, or both) interconnected path of red stones.  Blue's goal would be to connect the blue edges.
+<br><br>
+
+The crosscut is a formation that can bedevil such a game (see the first figure below).  If a crosscut is formed, 
+it could simultaneously prevent both Red and Blue from forming a winning path.
+<br><br>
+
+You can't just ban crosscuts.  There may come a point in the game where all available placements by both players 
+form crosscuts.
+<br><br>
+
+A <b>crosscut-equivalent loop</b> (explored in detail below) is a loop that can't be filled in without forming a crosscut.
+<br><br>
+
+<b>If a crosscut-equivalent loop forms, then (if the loop fills in) a crosscut will form.  
+<br><br>
+
+If a crosscut-equivalent loop never forms, then a crosscut will never form.  </b>
+<br><br>
+
+Players are not allowed to form a crosscut-equivalent loop or a crosscut (which is itself a crosscut-equivalent loop).  
+<br><br>
+
+One of the two players will always have a placement 
+available.  No crosscuts will form, and one of the 
+players will complete a winning path of stones.  
+<br><br>
+
+What follows is a discussion of some properties of crosscut-equivalent loops and a means of quickly identifying 
+crosscut-equivalent loops.
+<br><br>
+
+<h2>PLAY</h2>
+
+<p class="indent">
+
+Candy Necklace is a two-player game.  A square board of any size is used.  The north and 
+south board edges are colored red.  The west and east edges are colored blue.  The board is 
+initially empty.
+<br><br>
+
+The two players, Red and Blue, take turns placing their own stones onto unoccupied points on the 
+board, one stone per turn, starting with Red.  Passing is not allowed, but if you don't have an available 
+placement, your turn is skipped.  See PLACEMENT RESTRICTIONS below.<br><br>
+
+<h2>OBJECT OF THE GAME</h2>
+
+<p class="indent">
+
+Red must form an orthogonally interconnected path of red stones connecting 
+the two red board edges.  Blue must connect the two blue edges.
+<br><br>
+
+<h2>CROSSCUT</h2>
+
+<p class="indent">
+
+A crosscut is comprised of four stones, two of each color.  Each stone is orthogonally (horizontally or 
+vertically) adjacent to its two enemy stones.  The following figure shows the two possible crosscut formations.
+  <br><br>
+
+<img src="pictures/Candy_Necklace_Figure_A.jpg"></a>
+<br><br><br>
+
+
+<h2>ALTERNATING COLOR LOOP</h2>
+
+<p class="indent">
+
+A "loop" here is a closed path of stones, of either or both colors, interconnected via orthogonal 
+or diagonal adjacencies, or both.  <b>All loops considered here have alternating color stones.</b>  Every stone 
+in the loop is the opposite color of its two neighboring stones.  The following figure shows an example of a loop.
+  <br><br>
+
+<img src="pictures/Candy_Necklace_Figure_B.jpg"></a>
+<br/><br/>
+
+
+<h2>CROSSCUT-EQUIVALENT LOOP</h2>
+
+<p class="indent">
+
+A "crosscut-equivalent" loop can't be filled in without creating a crosscut.<br><br>
+
+
+<h2>PLACEMENT RESTRICTIONS</h2>
+
+<p class="indent">
+
+Players are not allowed to form a crosscut-equivalent loop.  [There could also be a rule for not allowing 
+a crosscut, even though a crosscut is itself already a crosscut-equivalent loop.  A crosscut is easy to 
+spot, and doing so can shortcut position evaluations.]
+  <br><br>
+
+
+<h2>MERGING CROSSCUTS</h2>
+
+<p class="indent">
+
+Every crosscut-equivalent loop can be built up from crosscuts in the following manner.  Start with 
+two separate crosscut formations.  Remove a stone from each of them, of opposite colors.  Then merge the two broken 
+crosscuts, making them intersect where their missing stones were, as shown in the following figures.
+  <br><br>
+
+
+<img src="pictures/Candy_Necklace_Figure_C.jpg"></a>
+<br><br><br>
+
+<img src="pictures/Candy_Necklace_Figure_D.jpg"></a>
+<br><br><br>
+
+<img src="pictures/Candy_Necklace_Figure_E.jpg"></a>
+<br><br><br>
+
+Every crosscut equivalent loop can be built up by repeatedly merging crosscuts into what 
+started as another crosscut, but has now grown to become a complex loop.  An example follows.
+ <br><br>
+
+
+<img src="pictures/Candy_Necklace_Figure_F.jpg"></a>
+<br><br><br>
+
+<img src="pictures/Candy_Necklace_Figure_G.jpg"></a>
+<br><br><br>
+
+<img src="pictures/Candy_Necklace_Figure_H.jpg"></a>
+<br><br><br>
+
+<img src="pictures/Candy_Necklace_Figure_I.jpg"></a>
+<br><br><br>
+
+<img src="pictures/Candy_Necklace_Figure_J.jpg"></a>
+<br><br><br>
+
+
+<h2>HORIZONTAL CRYSTAL GROWTH</h2>
+
+<p class="indent">
+
+Another series of crosscut merges...
+  <br><br>
+
+<img src="pictures/Candy_Necklace_Figure_K.jpg"></a>
+<br><br><br>
+
+<img src="pictures/Candy_Necklace_Figure_L.jpg"></a>
+<br><br><br>
+
+<img src="pictures/Candy_Necklace_Figure_M.jpg"></a>
+<br><br><br>
+
+<img src="pictures/Candy_Necklace_Figure_N.jpg"></a>
+<br><br><br>
+
+<img src="pictures/Candy_Necklace_Figure_O.jpg"></a>
+<br><br><br>
+
+<img src="pictures/Candy_Necklace_Figure_P.jpg"></a>
+<br><br><br>
+
+
+<h2>DIAGONAL CRYSTAL GROWTH</h2>
+
+<p class="indent">
+
+And one more series of crosscut merges...
+  <br><br>
+
+<img src="pictures/Candy_Necklace_Figure_Q.jpg"></a>
+<br><br><br>
+
+<img src="pictures/Candy_Necklace_Figure_R.jpg"></a>
+<br><br><br>
+
+<img src="pictures/Candy_Necklace_Figure_S.jpg"></a>
+<br><br><br>
+
+
+<h2>CROSSCUT MERGER EQUIVALENCE PROPERTY</h2>
+
+<p class="indent">
+
+<b>If a loop can be built up by a series of crosscut merges, then the loop is crosscut-equivalent. 
+  <br><br>
+
+If a loop can't be built up by a series of crosscut merges, then the loop is not crosscut-equivalent.    </b>
+<br><br>
+  
+<h2>MERGING CROSSCUT-EQUIVALENT LOOPS</h2>
+
+<p class="indent">
+
+  
+Any crosscut-equivalent loop can be merged with any other crosscut-equivalent loop (by removing one stone 
+from each loop and joining the two broken loops, as explained above) to form a larger crosscut-equivalent loop.  
+<br><br>
+
+<b>If a loop can be formed by merging crosscut-equivalent loops, then the loop will itself be crosscut-equivalent.</b>
+  <br><br>
+  
+Here's an example of that...
+<br><br>
+
+<img src="pictures/Candy_Necklace_Figure_T.jpg"></a>
+<br><br><br>
+
+<img src="pictures/Candy_Necklace_Figure_U.jpg"></a>
+<br><br><br>
+
+
+<h2>UNMERGING LOOPS</h2>
+
+<p class="indent">
+
+Loops can be deconstructed with an "unmerging" process - the reverse of the merging process.  
+Individual crosscut formations are produced as a byproduct of the unmerging process.
+<br><br>
+
+The following example demonstrates the unmerge operation.
+<br><br>
+
+<img src="pictures/Candy_Necklace_Figure_V.jpg"></a>
+<br><br><br>
+
+<img src="pictures/Candy_Necklace_Figure_W.jpg"></a>
+<br><br><br>
+
+
+
+<h2>CROSSUT REDUCTION PROPERTY </h2>
+
+<p class="indent">
+
+<b>If a loop can be reduced to separate crosscut formations, by applying a series of unmerging operations, then the loop is crosscut-equivalent.
+<br><br>
+
+If a loop can't be reduced to separate crosscut formations, by applying a series of unmerging operations, then the loop is not crosscut-equivalent.</b>
+<br><br>
+
+
+In the following example, the loop cannot be successively unmerged to form nothing but individual crosscut formations.  
+So the original loop is not crosscut-equivalent.
+<br><br>
+
+<img src="pictures/Candy_Necklace_Figure_X.jpg"></a>
+<br><br><br>
+
+<img src="pictures/Candy_Necklace_Figure_Y.jpg"></a>
+<br><br><br>
+
+
+
+  
+<h2>QUICK LOOP EVALUATION</h2>
+
+<p class="indent">
+
+Evaluating loops by unmerging them could be cumbersome.  A quicker way to evaluate loops is needed.  
+<br><br>
+
+  
+<h3>DEFINITIONS</h3>
+<p class="indent">
+
+EMPTY AREA - Orthogonally interconnected, maximally inclusive group of unoccupied points.<br><br>
+
+EMPTY PATH - Empty area in the shape of a single width path.<br><br>
+
+COMPONENT - A loop may surround a number of empty areas.  Each loop portion that surrounds an empty area is 
+a component.
+<br><br>
+
+<h3>REQUIREMENTS FOR LOOP CROSSCUT-EQUIVALENCE</h3>
+
+<p class="indent">
+
+<b>If a loop's components all meet the following requirements, then the loop is crosscut-equivalent.  
+<br><br>
+
+If any of the loop's components do not meet the requirements, then the loop is not crosscut-equivalent.</b>  
+[This is conjecture.  It fits all of the loops I've come across so far.]
+
+<br><br>
+
+
+<h3>SHAPE OF SURROUNDED AREA</h3>
+
+<p class="indent">
+
+A surrounded, empty area can only be an empty path or a 2x2 area.  
+<br><br>
+The following loop would be disqualified as crosscut-equivalent just based on that.
+<br><br>
+
+<img src="pictures/Candy_Necklace_Figure_Z.jpg"></a>
+<br><br><br>
+
+
+
+</p>
+
+<h3>OPPOSITE COLOR ACROSS</h3>
+
+<p class="indent">
+
+<b>EMPTY PATH</b><br>
+For a surrounded empty path, every stone in the component must be orthogonally across the empty path 
+from an enemy stone.
+<br><br>
+
+The following loop is not crosscut-equivalent because there are like-colored stones 
+across from each other.
+<br><br>
+
+<img src="pictures/Candy_Necklace_Figure_ZA.jpg"></a>
+<br><br><br>
+
+
+<b>2X2 AREA</b><br>
+For a surrounded 2x2 area,<br>
+A. Every stone in the component must be orthogonally across the 2x2 area from an enemy stone.<br>
+B. Every point of the 2x2 area must be orthogonally adjacent to two like-colored stones.
+<br><br>
+
+
+The following loop is crosscut-equivalent because both of its components meet the requirements.
+<br><br>
+
+<img src="pictures/Candy_Necklace_Figure_ZB.jpg"></a>
+<br><br><br>
+
+
+The following loop is not crosscut-equivalent because the top-right component doesn't qualify.  There 
+are like-colored stones across from each other, and not every point in its 2x2 area is orthogonally 
+adjacent to two like-colored stones.
+<br><br>
+
+<img src="pictures/Candy_Necklace_Figure_ZB2.jpg"></a>
+<br><br><br>
+
+
+The following loop is not crosscut-equivalent because the top component doesn't qualify.  It's too big.
+<br><br>
+
+<img src="pictures/Candy_Necklace_Figure_ZC.jpg"></a>
+<br><br><br>
+
+
+The following loop is not crosscut-equivalent because not every point in the 2x2 area is orthogonally 
+adjacent to two like-colored stones.
+<br><br>
+
+<img src="pictures/Candy_Necklace_Figure_ZD.jpg"></a>
+<br><br><br>
+
+
+<h2>AUTHOR'S NOTE</h2>
+
+<p class="indent">
+
+Feel free to publish this rule sheet, and to program the 
+game of Candy Necklace for online or offline play.&nbsp; No licensing fee or royalties are 
+expected.&nbsp;  However please don’t change the name or the rules, and please 
+attribute the game to me, Mark Steere.&nbsp;  My other games can be found at 
+<a href="http://www.marksteeregames.com">Mark Steere Games</a>.
+<br/><br/>
+</p>
+
+
+Copyright (c) 2024 by Mark Steere
+
+<br/><br/>
+
+</body>
+
+</html>

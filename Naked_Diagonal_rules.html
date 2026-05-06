@@ -1,0 +1,407 @@
+<html>
+
+<head>
+
+<title>Naked Diagonal</title>
+<meta name=description
+content="Naked Diagonal rule sheet">
+<meta name=keywords
+content="game, abstract game, mark steere games">
+
+<style type="text/css" media='screen'>
+
+  body  { font-size:large; 
+          background-image:url('pictures/paper_texture_a.jpg'); 
+          margin:0;
+          padding-top:1em;
+          min-width:800px }
+          
+  a:link {color: blue; text-decoration: underline; }
+  a:active {color: orange; text-decoration: underline; }
+  a:visited {color: purple; text-decoration: underline; }
+  a:hover {color: magenta; text-decoration: none; }
+  
+  p.indent { margin-left:2em;margin-right:2em }
+  
+  h2.section_header { font-size: x-large; }
+  
+      p.blue_bar { height:3px;
+  background-color:blue;
+  margin-top:1em;
+  margin-bottom:1em;
+  margin-left:5%;
+  margin-right:5%;
+  overflow: hidden }
+
+  img { margin-left:4em }
+
+</style>
+
+
+</head>
+
+
+<body style="margin-left:.5em;margin-right:.5em" bgcolor=white lang=EN-US link=blue alink=red vlink=purple>
+
+<h1 style="text-align:center; margin-bottom:0">NAKED DIAGONAL</h1>
+
+<h2 style="text-align:center; margin-top:0">by Mark Steere</h2>
+
+<hr size=2 width="80%" align=center>
+
+<h2>PREFACE</h2>
+
+<p class="indent">
+
+Naked Diagonal exists to demonstrate some connection game principles.  (And conversely, the principles 
+themselves comprise a game.)  Naked Diagonal may not be a game that anyone would ever want to play, although 
+there's nothing stopping you.
+<br><br>
+
+Naked Diagonal has a sister game, Candy Necklace, which also explores properties of connection games.
+<br><br>
+
+<h2>INTRODUCTION</h2>
+
+<p class="indent">
+
+In a typical, square-grid connection game, the north and south edges would be colored red, the 
+east and west edges colored blue.  Red's goal would be to connect the red edges with an orthogonally (horizontally 
+or vertically, or both) interconnected path of red stones.  Blue's goal would be to connect the blue edges.
+<br><br>
+
+The crosscut is a formation that can bedevil such a game (see the bottom-left formation in the first figure below).  
+If a crosscut is formed, it could simultaneously prevent both Red and Blue from forming a winning path.
+<br><br>
+
+One way to prevent crosscuts is to prohibit "naked diagonals" (see the first figure below).  A crosscut is comprised of 
+two naked diagonals.  There can't be a crosscut without a naked diagonal.
+<br><br>
+
+You can't just ban naked diagonals.  There may come a point in the game where all available placements by both players 
+form naked diagonals.
+<br><br>
+
+A <b>naked diagonal-equivalent</b> area (explored in detail below) is an area that can't be filled in without forming 
+a naked diagonal.
+<br><br>
+
+<b>If a naked diagonal-equivalent area forms, then (if the area fills in) a naked diagonal will form.  
+<br><br>
+
+If a naked diagonal-equivalent area never forms, then a naked diagonal will never form.  </b>
+<br><br>
+
+Players are not allowed to form a naked diagonal-equivalent area or a naked diagonal.  
+<br><br>
+
+One of the two players will always have a placement 
+available.  No naked diagonals will form, no 
+crosscuts will form, and one of the players will complete a winning path of stones.  
+<br><br>
+
+What follows is a discussion of some properties of naked diagonal-equivalent areas.
+<br><br>
+
+
+<h2>PLAY</h2>
+
+<p class="indent">
+
+Naked Diagonal is a two-player game.  A square board of any size is used.  The north and 
+south board edges are colored red.  The west and east edges are colored blue.  The board is 
+initially empty.
+<br><br>
+
+The two players, Red and Blue, take turns placing their own stones onto unoccupied points on the 
+board, one stone per turn, starting with Red.  Passing is not allowed, but if you don't have an available 
+placement, your turn is skipped.  See PLACEMENT RESTRICTIONS below.
+<br><br>
+
+<h2>OBJECT OF THE GAME</h2>
+
+<p class="indent">
+
+Red must form an orthogonally interconnected path of red stones connecting 
+the two red board edges.  Blue must connect the two blue edges.
+<br><br>
+
+
+<h2>NAKED DIAGONAL</h2>
+
+<p class="indent">
+
+A "diagonal" is comprised of a pair of diagonally adjacent, like-colored stones.  If no like-colored stone is 
+adjacent to both of them, they form a "naked diagonal".  In the following figure, there are three red naked diagonals and 
+two blue naked diagonals.
+<br><br>
+
+<img src="pictures/Naked_Diagonal_Figure_A.jpg"></a>
+<br><br><br>
+
+
+
+<h2>SWITCH</h2>
+
+<p class="indent">
+
+The following figure shows a "switch" formation.  The green dots indicate points that must be unoccupied.  
+A switch can also be a mirror and/or rotation of this formation.  
+<br><br>
+
+<img src="pictures/Naked_Diagonal_Figure_B.jpg"></a>
+<br><br><br>
+
+
+
+<h2>EMPTY AREA</h2>
+
+<p class="indent">
+
+An "empty area" is a group of orthogonally interconnected, unoccupied points (not necessarily maximally inclusive).
+<br><br>
+
+
+<h2>EMPTY PATH</h2>
+
+<p class="indent">
+
+An "empty path" is an empty area in the shape of a single width path.
+<br><br>
+
+
+<h2>NAKED DIAGONAL-EQUIVALENT</h2>
+
+<p class="indent">
+
+An empty area is "naked diagonal-equivalent" if there is no possible sequence of placements, by either 
+or both players, which can fill the area without forming a naked diagonal somewhere along the way.
+<br><br>
+
+
+
+<h2>PLACEMENT RESTRICTIONS</h2>
+
+<p class="indent">
+
+Players are not allowed to form a naked diagonal or a naked diagonal-equivalent area.  [There could also be a 
+rule for not allowing a switch.  
+A switch is easy to spot, and doing so can shortcut position evaluations.]
+<br><br>
+
+
+
+<h2>BAD - BANNED AND DISCONNECTED</h2>
+
+<p class="indent">
+
+Imagine an empty area in which one player, say Red, has no available placements.  Red is "banned" from that 
+area.  Blue may have available placements in the Red-banned area, but there is no possible sequence of blue 
+placements with which Blue can fill the area without creating a naked diagonal somewhere along the way.  Blue 
+is "disconnected" in the area.  Such an area is "banned and disconnected" (BAD).  A bi-colored formation which 
+creates a BAD area is a BAD formation.
+<br><br>
+
+Every bi-colored formation considered in this document (including the switch) is a BAD formation, 
+except for one: the "special" formation, described below.
+<br><br>
+
+
+<h2>CONSTRUCTING A BAD FORMATION</h2>
+
+<p class="indent">
+
+To construct a BAD formation, first create a monocolored formation of stones.  Without loss of generality, red 
+stones will be used throughout this document to create this initial, monocolored formation.  There must be an 
+empty area within the formation in which every point is an illegal placement for Red because it would form a naked diagonal.
+<br><br>
+
+Around the periphery of the red formation, there will be empty paths which Red could use to begin filling the 
+Red-banned area.  Blue must block these paths.  In doing so, Blue will complete a BAD 
+formation.
+
+
+<h3>STAIRCASE PATTERN</h3>
+
+<p class="indent">
+
+The staircase is a repeatable, monocolored pattern of stones.  Using red stones for the following example, two 
+staircase-shaped, red stone paths in close proximity sandwich a staircase-shaped empty path between them.  Every point 
+in this empty path is an illegal placement for Red because it would form a naked diagonal.
+<br><br>
+
+<img src="pictures/Naked_Diagonal_Figure_C.jpg"></a>
+<br><br><br>
+
+
+In the following figure, black dots indicate a Red-banned area.
+<br><br>
+
+<img src="pictures/Naked_Diagonal_Figure_D.jpg"></a>
+<br><br><br>
+
+
+<h3>BLOCKED STAIRCASE PATTERN</h3>
+
+<p class="indent">
+
+Assume that one of the players, say Red, has formed a staircase pattern.  
+
+<p class="indent">
+
+In the following figure, the green dots represent peripheral, empty paths which Red could use to begin filling the Red-banned area.
+<br><br>
+
+<img src="pictures/Naked_Diagonal_Figure_D2.jpg"></a>
+<br><br><br>
+
+Blue must block these peripheral, empty paths.  There are a number of ways Blue can do this.  One way is shown in the following 
+figure.  By blocking these paths, Blue has now completed a BAD formation.  Red is banned, unable to access the empty area, 
+and Blue is disconnected in the area.  There's no possible sequence of blue stone placements with which Blue can fill in the 
+Red-banned area without forming a naked diagonal somewhere along the way.
+<br><br>
+
+
+<!-- One blue stone is placed orthogonally adjacent 
+to one or two of the steps (unoccupied points) in the staircase.  Another blue stone is placed orthogonally adjacent 
+to one or two different steps.  The blue stones must be separated from each other by at least two steps.  Those 
+intervening steps comprise a BAD area.  
+<br><br> -->
+
+<img src="pictures/Naked_Diagonal_Figure_E.jpg"></a>
+<br><br><br>
+
+
+<h3>KNIGHT PATTERN</h3>
+
+<p class="indent">
+
+A knight pattern is a monocolored pattern of stones.  The only spatial relationship a stone 
+can have with a neighboring stone in the pattern is the knight move.  The following figure is an example of a red knight pattern.
+<br><br>
+
+<img src="pictures/Naked_Diagonal_Figure_F.jpg"></a>
+<br><br><br>
+
+In the following figure, the black dots represent an empty area inaccessible by Red.  
+<br><br>
+
+<img src="pictures/Naked_Diagonal_Figure_G.jpg"></a>
+<br><br><br>
+
+
+<h3>BLOCKED KNIGHT PATTERN</h3>
+
+<p class="indent">
+
+In the following figure, the green dots represent peripheral, empty paths which Red could use to begin filling a Red-banned area.
+<br><br>
+
+<img src="pictures/Naked_Diagonal_Figure_H.jpg"></a>
+<br><br><br>
+
+Blue must block these peripheral, empty paths.  There are a number of ways Blue can do this.  One way is shown in the following 
+figure.  By blocking these paths, Blue has now completed a BAD formation.  Red is banned, unable to access an empty area, 
+and Blue is disconnected in the area.  There's no possible sequence of blue stone placements with which Blue can fill in the 
+Red-banned area without forming a naked diagonal somewhere along the way.
+<br><br>
+
+<img src="pictures/Naked_Diagonal_Figure_I.jpg"></a>
+<br><br><br>
+
+
+
+<h3>KNIGHT PATTERN EXAMPLES</h3>
+
+<p class="indent">
+
+The following figures show two more examples of knight pattern BAD formations.
+<br><br>
+
+<img src="pictures/Naked_Diagonal_Figure_J.jpg"></a>
+<br><br><br>
+
+
+<img src="pictures/Naked_Diagonal_Figure_K.jpg"></a>
+<br><br><br>
+
+
+<img src="pictures/Naked_Diagonal_Figure_L.jpg"></a>
+<br><br><br>
+
+
+<img src="pictures/Naked_Diagonal_Figure_M.jpg"></a>
+<br><br><br>
+
+
+
+
+<h3>HYBRID PATTERNS</h3>
+
+<p class="indent">
+
+The staircase pattern and knight pattern can be combined to form hybrid patterns, which can then be blocked.  Two examples follow.
+<br><br>
+
+
+<img src="pictures/Naked_Diagonal_Figure_N.jpg"></a>
+<br><br><br>
+
+
+<img src="pictures/Naked_Diagonal_Figure_O.jpg"></a>
+<br><br><br>
+
+
+<img src="pictures/Naked_Diagonal_Figure_P.jpg"></a>
+<br><br><br>
+
+
+<img src="pictures/Naked_Diagonal_Figure_Q.jpg"></a>
+<br><br><br>
+
+
+
+<h3>SPECIAL FORMATION</h3>
+
+<p class="indent">
+
+The following special formation is the only known formation that's naked diagonal-equivalent but not also a BAD.
+<br><br>
+
+<img src="pictures/Naked_Diagonal_Figure_R.jpg"></a>
+<br><br><br>
+
+
+
+
+
+<h2>CONCLUSION</h2>
+
+<p class="indent">
+With the exception of the special naked diagonal-equivalent formation described in the preceding section, 
+it seems that every possible naked diagonal-equivalent formation can 
+formed by creating the staircase pattern or the knight pattern, or both cobbled together, with one player's stones, 
+and then blocking the pattern with the other player's stones.
+<br><br>
+
+
+<h2>AUTHOR'S NOTE</h2>
+
+<p class="indent">
+
+Feel free to publish this rule sheet, and to program the 
+game of Naked Diagonal for online or offline play.&nbsp; No licensing fee or royalties are 
+expected.&nbsp;  However please don’t change the name or the rules, and please 
+attribute the game to me, Mark Steere.&nbsp;  My other games can be found at 
+<a href="http://www.marksteeregames.com">Mark Steere Games</a>.
+<br/><br/>
+</p>
+
+
+Copyright (c) 2024 by Mark Steere
+
+<br/><br/>
+
+</body>
+
+</html>
